@@ -3,9 +3,9 @@ namespace Projeto_forms_Vet.Views;
 using Microsoft.Maui.Controls;
 using System;
 
-public partial class FormPet : ContentPage
+public partial class FormCadastroPet : ContentPage
 {
-    public FormPet()
+    public FormCadastroPet()
     {
         InitializeComponent();
     }

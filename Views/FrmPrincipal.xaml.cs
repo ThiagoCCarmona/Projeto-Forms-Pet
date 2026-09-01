@@ -13,7 +13,7 @@ public partial class FrmPrincipal : ContentPage
 
 	private async void OnPetsClicked(object sender, EventArgs e)
 	{
-		await Navigation.PushAsync(new FormPet());
+		await Navigation.PushAsync(new FormCadastroPet());
 	}
 
 	private async void OnEsqueceuSenhaClicked(object sender, EventArgs e)
