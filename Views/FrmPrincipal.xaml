@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto_forms_Vet.Views.FrmPrincipal"
+             Title="Principal">
+
+    <VerticalStackLayout Padding="30" Spacing="25" VerticalOptions="Center" HorizontalOptions="Center">
+
+        <Label Text="VanderPet" 
+               FontSize="40" 
+               HorizontalOptions="Center" />
+
+        <Image Source="dotnet_bot.png" 
+               HeightRequest="150" 
+               WidthRequest="150" 
+               HorizontalOptions="Center" />
+
+
+        <Label Text="Login: "  />
+        <Entry x:Name="txtLogin"
+                   Placeholder="Digite seu login"
+                   Keyboard="Email"
+                   HorizontalOptions="Fill" />
+
+         <Label Text="Senha: "  />
+         <Entry x:Name="txtSenha"
+           Placeholder="Digite sua senha"
+           Keyboard="Password"
+           HorizontalOptions="Fill" />
+
+        <Button x:Name="BtnEntrar"
+                Text="Entrar"
+                Clicked="OnEntrarClicked"
+                WidthRequest="200"/>
+
+
+        <Button x:Name="BtnEsqueceuSenha"
+                Text="Esqueci minha senha"
+                Clicked="OnEsqueceuSenhaClicked"
+                WidthRequest="200"/>
+        
+         <Button x:Name="BtnCadastro"
+                 Text="Cadastro"
+                 Clicked="OnCadastroClicked"
+                 WidthRequest="200"/>
+
+
+    </VerticalStackLayout>
+</ContentPage>
+    
