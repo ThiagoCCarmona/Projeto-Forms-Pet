@@ -2,11 +2,69 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Projeto_forms_Vet.Views.FormCadastroAgendamento"
-             Title="FormCadastroAgendamento">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="Novo agendamento">
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="25"  HorizontalOptions="Center">
+            <Label 
+                Text="Cadastrar agendamento"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+            <HorizontalStackLayout Spacing="10">
+                <Label Text="Selecione um pet: "/>
+                 <Button x:Name="Pet"
+                        Text="Pets"
+                        Clicked="onVerPets"
+                        WidthRequest="100"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center" 
+                        />
+            </HorizontalStackLayout>
+            
+            
+            <Label Text="Selecione o serviço: "/>
+            <Picker x:Name="pckServico" Title="Selecione">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Banho</x:String>
+                        <x:String>Tosa</x:String>
+                        <x:String>Baho e tosa</x:String>
+                        <x:String>Vacinação</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Selecione o porte do pet: "/>
+            <Picker x:Name="pckPorte" Title="Selecione">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Pequeno</x:String>
+                        <x:String>Médio</x:String>
+                        <x:String>Grande</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Selecione o dia: "/>
+            <DatePicker x:Name="DataAgendamento"/>
+
+            <Label Text="Selecione o horário do atendimento: "/>
+            <TimePicker x:Name="HoraAgendamento"/>
+
+      
+
+            <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+                <Button x:Name="Cadastrar"
+                     Text="Salvar"
+                     WidthRequest="200"
+                     HorizontalOptions="Start"
+                     Background="Green"
+                     Clicked="onSalvarAgendamento"/>
+                <Button Text="Voltar" Clicked="OnVoltarClicked" BackgroundColor="Gray" WidthRequest="200"/>
+            </HorizontalStackLayout>
+
     </VerticalStackLayout>
+    </ScrollView>
+    
+    
 </ContentPage>

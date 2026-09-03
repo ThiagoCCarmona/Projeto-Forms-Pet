@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto_forms_Vet.Views.formCadastroEndereco"
+             Title="Cadastrar novo endereço">
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="25"  HorizontalOptions="Center"  >
+            <Label 
+                   Text="Novo endereço"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center" />
+
+            <Label Text="CEP:"/>
+            <Entry x:Name="CEP"
+                   Placeholder="Insira seu CEP"
+                   Keyboard="Numeric"
+                   VerticalOptions="Fill"
+                   
+                   />
+
+            <Label Text="Rua:"/>
+            <Entry x:Name="Rua"
+                   Placeholder="Insira sua rua"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Fill"
+                   Keyboard="Text"
+                   />
+
+            <Label Text="Número:"/>
+            <Entry x:Name="número"
+                   Placeholder="Insira o número"
+                   Keyboard="Numeric"
+                   HorizontalOptions="Fill"/>
+
+            <Label Text="Complemento:"/>
+            <Entry x:Name="Complemento"
+                   Placeholder="Insira o complemento"
+                   HorizontalOptions="Fill"
+                   Keyboard="Text"
+                   />
+
+            <HorizontalStackLayout  Spacing="20" HorizontalOptions="Center">
+                <Button x:Name="Cadastrar"
+                        Text="Novo"
+                        WidthRequest="200"
+                        HorizontalOptions="Start"
+                        Background="Green"
+                        Clicked="onClickedSalvaEndereco"/>  
+                <Button Text="Voltar" Clicked="OnVoltarClicked" BackgroundColor="Gray" WidthRequest="200"/>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+    
+    
+</ContentPage>

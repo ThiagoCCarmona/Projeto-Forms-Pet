@@ -2,11 +2,29 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Projeto_forms_Vet.Views.FormAgendamento"
-             Title="FormAgendamento">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Agendamentos">
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="25"  HorizontalOptions="Center" >
+            <Label 
+                Text="Agendamentos"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+            <Label Text="Pesquisar:"/>
+            <Entry x:Name="Pesquisa"
+                       Placeholder="Pesquisar agendamento"
+                       HorizontalOptions="Fill"
+                       Keyboard="Default"/>
+
+            <HorizontalStackLayout Spacing="20"  HorizontalOptions="Fill">
+                <Button x:Name="Cadastrar"
+                        Text="Novo"
+                        WidthRequest="200"
+                        HorizontalOptions="Start"
+                        Background="Green"
+                        Clicked="onCadastroAgendamento"/>
+                <Button Text="Voltar" Clicked="OnVoltarClicked" BackgroundColor="Gray" WidthRequest="200"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

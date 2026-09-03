@@ -3,45 +3,80 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Projeto_forms_Vet.Views.FormEsqueceuSenha"
              Title="Esqueci minha senha">
-    <VerticalStackLayout>
-        <Label 
-            Text="Esqueci minha senha"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Label 
-            Text="Digite seu telefone para redefinir sua senha:"/>
-        <Entry x:Name="txtTelefone" 
-               Placeholder="Telefone" 
-               Keyboard="Telephone" 
-               HorizontalOptions="Fill"/>
-        
-        <Button Text="Redefinir Senha" BackgroundColor="Green" WidthRequest="150" Clicked="OnRedefinirSenhaClicked"/>
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="25"  HorizontalOptions="Center">
+            <Label 
+                Text="Esqueci minha senha"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            <Label 
+                Text="Digite seu telefone para redefinir sua senha:"/>
+            <Entry x:Name="txtTelefone" 
+                   Placeholder="Telefone" 
+                   Keyboard="Telephone" 
+                   HorizontalOptions="Fill"/>
 
-        <Label 
-            x:Name="MensagemEnvio" 
-            Text="Código de verificação enviado para seu telefone."
-            VerticalOptions="Center"
-            HorizontalOptions="Center"        
-            Opacity="0"/>
-
-        <Label 
-            x:Name="PreencherVerificacao" 
-            Text="Preencha com o código de verificação." 
-            Opacity="0"/>
-
-        <Entry x:Name="txtCodigo" 
-               Placeholder="Código de verificação" 
-               Keyboard="Numeric" 
-               Opacity="0"
-               HorizontalOptions="Fill"/>
-
-        <Button x:Name="btnVerificarCodigo"
-                Text="Verificar Código" 
-                BackgroundColor="Blue" 
-                WidthRequest="150" 
-                Clicked="OnVerificarCodigoClicked"
+            <HorizontalStackLayout  Spacing="20" HorizontalOptions="Center">
+                <Button Text="Redefinir Senha" BackgroundColor="Green" WidthRequest="200" Clicked="OnRedefinirSenhaClicked"/>
+                <Button Text="Voltar" Clicked="OnVoltarClicked" BackgroundColor="Gray" WidthRequest="200"/>
+            </HorizontalStackLayout>
+            
+            <Label 
+                x:Name="MensagemEnvio" 
+                Text="Código de verificação enviado para seu telefone."
+                VerticalOptions="Center"
+                HorizontalOptions="Center"        
                 Opacity="0"/>
 
+            <Label 
+                x:Name="PreencherVerificacao" 
+                Text="Preencha com o código de verificação." 
+                Opacity="0"/>
 
-    </VerticalStackLayout>
+            <Entry x:Name="txtCodigo" 
+                   Placeholder="Código de verificação" 
+                   Keyboard="Numeric" 
+                   Opacity="0"
+                   HorizontalOptions="Fill"/>
+
+            <Button x:Name="btnVerificarCodigo"
+                    Text="Verificar Código" 
+                    BackgroundColor="Blue" 
+                    WidthRequest="150" 
+                    Clicked="OnVerificarCodigoClicked"
+                    Opacity="0"/>
+
+            <Label 
+                x:Name="lbNovaSenha" 
+                Text="Insira uma nova senha"
+                Opacity="0"/>
+            <Entry x:Name="txtNovaSenha" 
+                   Placeholder="Nova senha" 
+                   Keyboard="Password" 
+                   Opacity="0"
+                   HorizontalOptions="Fill"/>
+
+            <Label 
+                x:Name="lbConfirmarSenha" 
+                Text="Confirme a nova senha:" 
+                Opacity="0"/>
+            <Entry x:Name="txtConfirmarSenha" 
+                   Placeholder="Confirmar senha" 
+                   Keyboard="Password" 
+                   Opacity="0"
+                   HorizontalOptions="Fill"/>
+
+            <Button x:Name="btnRedefinirSenha"
+                    Text="Redefinir Senha" 
+                    BackgroundColor="Green" 
+                    WidthRequest="150" 
+                    Clicked="OnRedefinirSenhaFinalClicked"
+                    Opacity="0"/>
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+    
+   
 </ContentPage>
